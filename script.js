@@ -73,16 +73,19 @@ year.addEventListener('input', () => {
       e.preventDefault();
       errorYear.innerText = "Must be in the past";
       year.style.borderColor = 'red';
+      document.getElementById('year-label').classList.add('text-red-400');
       hasError = true;
     } if (monthVal > 12) {
       e.preventDefault();
       errorMonth.innerText = 'Must be a valid Month';
       month.style.borderColor = 'red';
+      document.getElementById('month-label').classList.add('text-red-400');
       hasError = true;
     } if (dayVal > 31) {
       e.preventDefault();
       errorDay.innerText = 'Must be a valid Day';
       day.style.borderColor = 'red';
+      document.getElementById('day-label').classList.add('text-red-400');
       hasError = true;
     } if (!hasError){
       calculaIdade(yearVal, monthVal, dayVal);
